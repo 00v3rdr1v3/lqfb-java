@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="openjpa">
+		<provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+		<properties>
+			<property name="openjpa.ConnectionURL"
+				value="jdbc:postgresql://192.168.81.14:5432/liquid_feedback" />
+			<property name="openjpa.ConnectionDriverName" value="org.postgresql.Driver" />
+			<property name="openjpa.ConnectionUserName" value="www-data" />
+			<property name="openjpa.ConnectionPassword" value="www-data" />
+			<property name="openjpa.Log" value="DefaultLevel=WARN, Tool=INFO" />
+		</properties>
+	</persistence-unit>
+	<persistence-unit name="testPU" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<class>org.lqfb.entities.AllowedPolicy</class>
+		<class>org.lqfb.entities.AllowedPolicyId</class>
+		<class>org.lqfb.entities.Area</class>
+		<class>org.lqfb.entities.AreaDelegation</class>
+		<class>org.lqfb.entities.AreaMemberCount</class>
+		<class>org.lqfb.entities.AreaSetting</class>
+		<class>org.lqfb.entities.AreaSettingId</class>
+
+		<!-- <class>org.lqfb.entities.Battle</class> -->
+		<class>org.lqfb.entities.BattleParticipant</class>
+		<class>org.lqfb.entities.BattleView</class>
+		<class>org.lqfb.entities.Contact</class>
+		<class>org.lqfb.entities.ContactId</class>
+		<class>org.lqfb.entities.Contingent</class>
+		<class>org.lqfb.entities.CriticalOpinion</class>
+		<class>org.lqfb.entities.CurrentDraft</class>
+		<class>org.lqfb.entities.DelegatingInterestSnapshot</class>
+		<class>org.lqfb.entities.DelegatingInterestSnapshotId</class>
+		<class>org.lqfb.entities.DelegatingPopulationSnapshot</class>
+		<class>org.lqfb.entities.DelegatingPopulationSnapshotId</class>
+		<class>org.lqfb.entities.DelegatingVoter</class>
+		<class>org.lqfb.entities.DelegatingVoterId</class>
+		<class>org.lqfb.entities.Delegation</class>
+		<class>org.lqfb.entities.DirectInterestSnapshot</class>
+		<class>org.lqfb.entities.DirectInterestSnapshotId</class>
+		<class>org.lqfb.entities.DirectPopulationSnapshot</class>
+		<class>org.lqfb.entities.DirectPopulationSnapshotId</class>
+		<!-- <class>org.lqfb.entities.DirectSupporterSnapshot</class> <class>org.lqfb.entities.DirectSupporterSnapshotId</class> -->
+		<class>org.lqfb.entities.DirectVoter</class>
+		<class>org.lqfb.entities.DirectVoterId</class>
+		<class>org.lqfb.entities.Draft</class>
+		<!-- <class>org.lqfb.entities.Event</class> -->
+		<class>org.lqfb.entities.EventSeenByMember</class>
+		<class>org.lqfb.entities.ExpiredSession</class>
+		<class>org.lqfb.entities.Initiative</class>
+		<class>org.lqfb.entities.InitiativeSetting</class>
+		<class>org.lqfb.entities.InitiativeSettingId</class>
+		<class>org.lqfb.entities.Initiator</class>
+		<class>org.lqfb.entities.InitiatorId</class>
+		<!-- <class>org.lqfb.entities.Interest</class> <class>org.lqfb.entities.InterestId</class> -->
+		<class>org.lqfb.entities.Issue</class>
+		<class>org.lqfb.entities.IssueComment</class>
+		<class>org.lqfb.entities.IssueCommentId</class>
+		<class>org.lqfb.entities.IssueDelegation</class>
+		<class>org.lqfb.entities.IssueSetting</class>
+		<class>org.lqfb.entities.IssueSettingId</class>
+		<class>org.lqfb.entities.IssueWithRanksMissing</class>
+		<class>org.lqfb.entities.LiquidFeedbackVersion</class>
+		<class>org.lqfb.entities.Member</class>
+		<class>org.lqfb.entities.MemberApplication</class>
+		<class>org.lqfb.entities.MemberContingent</class>
+		<class>org.lqfb.entities.MemberContingentLeft</class>
+		<class>org.lqfb.entities.MemberCount</class>
+		<class>org.lqfb.entities.MemberCountView</class>
+		<class>org.lqfb.entities.MemberHistory</class>
+		<class>org.lqfb.entities.MemberImage</class>
+		<class>org.lqfb.entities.MemberImageId</class>
+		<class>org.lqfb.entities.MemberRelationSetting</class>
+		<class>org.lqfb.entities.MemberRelationSettingId</class>
+		<!-- <class>org.lqfb.entities.NotificationSent</class> -->
+		<class>org.lqfb.entities.OpenIssue</class>
+		<class>org.lqfb.entities.OpeningDraft</class>
+		<!-- <class>org.lqfb.entities.Opinion</class> <class>org.lqfb.entities.OpinionId</class> -->
+		<class>org.lqfb.entities.Policy</class>
+		<class>org.lqfb.entities.Privilege</class>
+		<class>org.lqfb.entities.PrivilegeId</class>
+		<class>org.lqfb.entities.RenderedDraft</class>
+		<class>org.lqfb.entities.RenderedDraftId</class>
+		<class>org.lqfb.entities.RenderedIssueComment</class>
+		<class>org.lqfb.entities.RenderedIssueCommentId</class>
+		<class>org.lqfb.entities.RenderedMemberStatement</class>
+		<class>org.lqfb.entities.RenderedMemberStatementId</class>
+		<class>org.lqfb.entities.RenderedSuggestion</class>
+		<class>org.lqfb.entities.RenderedSuggestionId</class>
+		<class>org.lqfb.entities.RenderedVotingComment</class>
+		<class>org.lqfb.entities.RenderedVotingCommentId</class>
+		<class>org.lqfb.entities.SelectedEventSeenByMember</class>
+		<class>org.lqfb.entities.Session</class>
+		<class>org.lqfb.entities.Setting</class>
+		<class>org.lqfb.entities.SettingId</class>
+		<class>org.lqfb.entities.SettingMap</class>
+		<class>org.lqfb.entities.SettingMapId</class>
+		<!-- <class>org.lqfb.entities.Suggestion</class> -->
+		<class>org.lqfb.entities.SuggestionSetting</class>
+		<class>org.lqfb.entities.SuggestionSettingId</class>
+		<!-- <class>org.lqfb.entities.Supporter</class> <class>org.lqfb.entities.SupporterId</class> 
+			<class>org.lqfb.entities.SystemSetting</class> -->
+		<class>org.lqfb.entities.Timeline</class>
+		<class>org.lqfb.entities.TimelineDraft</class>
+		<class>org.lqfb.entities.TimelineInitiative</class>
+		<class>org.lqfb.entities.TimelineIssue</class>
+		<class>org.lqfb.entities.TimelineSuggestion</class>
+		<class>org.lqfb.entities.Unit</class>
+		<class>org.lqfb.entities.UnitDelegation</class>
+		<class>org.lqfb.entities.UnitMemberCount</class>
+		<class>org.lqfb.entities.UnitSetting</class>
+		<class>org.lqfb.entities.UnitSettingId</class>
+		<!-- <class>org.lqfb.entities.Vote</class> <class>org.lqfb.entities.VoteId</class> -->
+		<class>org.lqfb.entities.VotingComment</class>
+		<class>org.lqfb.entities.VotingCommentId</class>
+
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.connection.url" value="jdbc:postgresql://192.168.81.14:5432/lqfb_test" />
+			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+			<property name="hibernate.connection.username" value="lqfb-test" />
+			<property name="hibernate.connection.password" value="lqfb-test" />
+		</properties>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+<!-- 
+	The following Tables have problems being converted to jpa java entities, because they use non standard foreign keys
+ -->
+	<table-filter match-schema=".*" match-catalog=".*" match-name="battle" exclude="true" />
+	<table-filter match-schema=".*" match-catalog=".*" match-name="direct_supporter_snapshot" exclude="true" />
+	<table-filter match-schema=".*" match-catalog=".*" match-name="event" exclude="true" />
+	<table-filter match-schema=".*" match-catalog=".*" match-name="opinion" exclude="true" />
+	<table-filter match-schema=".*" match-catalog=".*" match-name="suggestion" exclude="true" />
+	<table-filter match-schema=".*" match-catalog=".*" match-name="supporter" exclude="true" />
+	<table-filter match-schema=".*" match-catalog=".*" match-name="vote" exclude="true" />
+	<table-filter match-schema=".*" match-catalog=".*" match-name="system_setting" exclude="true" />
+	<table-filter match-schema=".*" match-catalog=".*" match-name="notification_sent" exclude="true" />
+	
+</hibernate-reverse-engineering>
