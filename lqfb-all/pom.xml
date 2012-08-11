@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-  	<module>../../../../git/lqfb-java/lqfb-entities</module>
+  	<module>../lqfb-entities</module>
   	<module>../lqfb-business</module>
   	<module>../lqfb-services-data</module>
   	<module>../lqfb-rest</module>
